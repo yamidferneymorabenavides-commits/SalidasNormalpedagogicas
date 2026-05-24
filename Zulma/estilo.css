@@ -1,7 +1,8 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#f4f7fc;
+    background:linear-gradient(to bottom,#eef4ff,#dce9ff);
+    scroll-behavior:smooth;
 }
 
 /* =========================
@@ -29,6 +30,11 @@ body{
     object-fit:cover;
     box-shadow:0 0 25px rgba(255,255,255,0.7);
     background:white;
+    transition:0.4s;
+}
+
+.logo-normal img:hover{
+    transform:scale(1.08) rotate(3deg);
 }
 
 .texto-header h1{
@@ -56,7 +62,7 @@ body{
 .contenedor{
     width:90%;
     margin:auto;
-    padding-bottom:40px;
+    padding-bottom:60px;
 }
 
 /* =========================
@@ -69,11 +75,13 @@ body{
     padding:25px;
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.15);
-    transition:0.3s;
+    transition:0.4s;
+    animation:aparecer 1s ease;
 }
 
 .carpeta:hover{
-    transform:translateY(-5px);
+    transform:translateY(-10px) scale(1.01);
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
 }
 
 .carpeta h2{
@@ -81,6 +89,8 @@ body{
     margin-bottom:20px;
     font-size:30px;
     text-align:center;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 /* =========================
@@ -104,8 +114,27 @@ body{
 }
 
 .galeria img:hover{
-    transform:scale(1.05);
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transform:scale(1.08) rotate(1deg);
+    filter:brightness(1.1);
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 /* =========================
@@ -121,7 +150,8 @@ body{
     top:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.9);
+    background:rgba(0,0,0,0.92);
+    backdrop-filter:blur(5px);
 }
 
 .modal img{
@@ -130,7 +160,7 @@ body{
     max-width:85%;
     max-height:85%;
     border-radius:20px;
-    box-shadow:0 0 20px rgba(255,255,255,0.3);
+    box-shadow:0 0 25px rgba(255,255,255,0.4);
 }
 
 #cerrar{
@@ -145,6 +175,46 @@ body{
 
 #cerrar:hover{
     transform:scale(1.2);
+}
+
+/* =========================
+   BOTÓN VOLVER ARRIBA
+========================= */
+
+.boton-arriba{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#005bea;
+    color:white;
+    border:none;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+    z-index:999;
+}
+
+.boton-arriba:hover{
+    background:#003c8f;
+    transform:scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#003c8f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    font-size:14px;
+    letter-spacing:1px;
 }
 
 /* =========================
