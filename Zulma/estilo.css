@@ -10,7 +10,11 @@ body{
 ========================= */
 
 .encabezado{
-    background:linear-gradient(135deg,#003c8f,#005bea,#007bff);
+    background-image:url('https://lh3.googleusercontent.com/d/12gRGgABiIYpXRdPXL0vlTeN3fDMljG-I');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
     color:white;
     display:flex;
     align-items:center;
@@ -20,8 +24,24 @@ body{
     text-align:left;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
     flex-wrap:wrap;
+    position:relative;
+}
+.encabezado::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    border-radius:0 0 10px 10px;
 }
 
+.logo-normal,
+.texto-header{
+    position:relative;
+    z-index:2;
+}
 .logo-normal img{
     width:150px;
     height:150px;
