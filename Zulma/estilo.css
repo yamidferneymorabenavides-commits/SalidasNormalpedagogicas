@@ -1,10 +1,12 @@
 body{
     margin:0;
-    font-family:Arial;
-    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+    background:#f4f7fc;
 }
 
-/* ENCABEZADO */
+/* =========================
+   ENCABEZADO MODERNO
+========================= */
 
 .encabezado{
     background:linear-gradient(135deg,#003c8f,#005bea,#007bff);
@@ -12,91 +14,103 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:30px;
-    padding:30px;
+    gap:35px;
+    padding:35px;
     text-align:left;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    flex-wrap:wrap;
 }
 
 .logo-normal img{
-    width:140px;
-    height:140px;
+    width:150px;
+    height:150px;
     border-radius:50%;
-    border:5px solid white;
+    border:6px solid white;
     object-fit:cover;
-    box-shadow:0 0 20px rgba(255,255,255,0.7);
+    box-shadow:0 0 25px rgba(255,255,255,0.7);
+    background:white;
 }
 
 .texto-header h1{
-    font-size:50px;
+    font-size:55px;
     margin:0;
+    font-weight:bold;
 }
 
 .texto-header h2{
-    font-size:30px;
+    font-size:32px;
     margin-top:10px;
     color:#dbe9ff;
 }
 
 .texto-header p{
-    font-size:20px;
+    font-size:22px;
     margin-top:10px;
+    color:#f1f1f1;
 }
 
-/* RESPONSIVE CELULAR */
+/* =========================
+   CONTENEDOR
+========================= */
 
-@media(max-width:768px){
-
-    .encabezado{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .texto-header h1{
-        font-size:35px;
-    }
-
-    .texto-header h2{
-        font-size:24px;
-    }
-
-    .logo-normal img{
-        width:110px;
-        height:110px;
-    }
-
-}
 .contenedor{
     width:90%;
     margin:auto;
+    padding-bottom:40px;
 }
+
+/* =========================
+   TARJETAS
+========================= */
 
 .carpeta{
     background:white;
-    margin-top:30px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    margin-top:35px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
+
+.carpeta:hover{
+    transform:translateY(-5px);
+}
+
+.carpeta h2{
+    color:#003c8f;
+    margin-bottom:20px;
+    font-size:30px;
+    text-align:center;
+}
+
+/* =========================
+   GALERÍA
+========================= */
 
 .galeria{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+    gap:18px;
 }
 
 .galeria img{
     width:100%;
     height:250px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:15px;
     cursor:pointer;
-    transition:0.3s;
+    transition:0.4s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 .galeria img:hover{
     transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
+
+/* =========================
+   MODAL
+========================= */
 
 .modal{
     display:none;
@@ -113,9 +127,10 @@ body{
 .modal img{
     display:block;
     margin:auto;
-    max-width:80%;
-    max-height:80%;
+    max-width:85%;
+    max-height:85%;
     border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
 }
 
 #cerrar{
@@ -123,6 +138,46 @@ body{
     top:20px;
     right:40px;
     color:white;
-    font-size:50px;
+    font-size:55px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+#cerrar:hover{
+    transform:scale(1.2);
+}
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media(max-width:768px){
+
+    .encabezado{
+        flex-direction:column;
+        text-align:center;
+        padding:25px;
+    }
+
+    .texto-header h1{
+        font-size:38px;
+    }
+
+    .texto-header h2{
+        font-size:24px;
+    }
+
+    .texto-header p{
+        font-size:18px;
+    }
+
+    .logo-normal img{
+        width:110px;
+        height:110px;
+    }
+
+    .carpeta h2{
+        font-size:24px;
+    }
+
 }
