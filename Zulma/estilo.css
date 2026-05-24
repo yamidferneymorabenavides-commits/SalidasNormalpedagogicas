@@ -90,6 +90,49 @@ body{
 }
 
 /* =========================
+   MENSAJE PRINCIPAL Y FINAL
+========================= */
+
+.mensaje-principal,
+.mensaje-final{
+    width:90%;
+    max-width:1100px;
+    margin:45px auto;
+    padding:40px;
+    background:white;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    animation:aparecer 1s ease;
+    border-left:8px solid #005bea;
+    border-right:8px solid #005bea;
+}
+
+.mensaje-principal h2,
+.mensaje-final h2{
+    color:#003c8f;
+    font-size:38px;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.mensaje-principal p,
+.mensaje-final p{
+    color:#222;
+    font-size:20px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.mensaje-principal:hover,
+.mensaje-final:hover{
+    transform:translateY(-5px);
+    transition:0.4s;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* =========================
    CONTENEDOR
 ========================= */
 
@@ -286,32 +329,6 @@ footer{
     font-size:14px;
     letter-spacing:1px;
 }
-.mensaje-principal,
-.mensaje-final{
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 20px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.mensaje-principal h2,
-.mensaje-final h2{
-    color: #ffffff;
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.mensaje-principal p,
-.mensaje-final p{
-    color: #f1f1f1;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
 
 /* =========================
    RESPONSIVE CELULAR
@@ -348,6 +365,22 @@ footer{
 
     .qr-container img{
         width:140px;
+    }
+
+    .mensaje-principal,
+    .mensaje-final{
+        padding:25px;
+    }
+
+    .mensaje-principal h2,
+    .mensaje-final h2{
+        font-size:28px;
+    }
+
+    .mensaje-principal p,
+    .mensaje-final p{
+        font-size:17px;
+        text-align:left;
     }
 
 }
