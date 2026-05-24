@@ -28,7 +28,7 @@ body{
     overflow:hidden;
 }
 
-/* CAPA OSCURA SOBRE LA IMAGEN */
+/* CAPA OSCURA */
 
 .encabezado::before{
     content:"";
@@ -41,7 +41,7 @@ body{
     z-index:1;
 }
 
-/* TEXTO Y LOGO ENCIMA */
+/* TEXTO Y LOGO */
 
 .logo-normal,
 .texto-header{
@@ -66,7 +66,7 @@ body{
     transform:scale(1.08) rotate(3deg);
 }
 
-/* TEXTOS */
+/* TEXTO */
 
 .texto-header h1{
     font-size:55px;
@@ -238,19 +238,6 @@ body{
 }
 
 /* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#003c8f;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-    font-size:14px;
-    letter-spacing:1px;
-}
-/* =========================
    QR
 ========================= */
 
@@ -273,7 +260,8 @@ footer{
 }
 
 .qr-container img{
-    width:230px;
+    width:180px;
+    max-width:80%;
     border-radius:20px;
     background:white;
     padding:15px;
@@ -284,6 +272,21 @@ footer{
 .qr-container img:hover{
     transform:scale(1.05);
 }
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#003c8f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
 /* =========================
    RESPONSIVE CELULAR
 ========================= */
@@ -315,6 +318,10 @@ footer{
 
     .carpeta h2{
         font-size:24px;
+    }
+
+    .qr-container img{
+        width:140px;
     }
 
 }
