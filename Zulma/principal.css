@@ -210,3 +210,12 @@ h3{
     }
 
 }
+.boton2{
+
+    background:#ff9800;
+}
+
+.boton2:hover{
+
+    background:#d97706;
+}
